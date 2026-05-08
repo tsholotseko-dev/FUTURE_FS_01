@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tsholofelo Tseko | Cybersecurity Analyst</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+
+  <!-- ═══════════════════════════
+       NAVBAR
+  ═══════════════════════════ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Home">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">TPT</span>
+        <span class="logo-bracket">]</span>
+        <span class="logo-cursor">_</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about"      class="nav-link" data-num="01">About</a></li>
+        <li><a href="#skills"     class="nav-link" data-num="02">Skills</a></li>
+        <li><a href="#projects"   class="nav-link" data-num="03">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-num="04">Experience</a></li>
+        <li><a href="#contact"    class="nav-link" data-num="05">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-cta">Hire Me</a>
+
+      <button class="nav-burger" id="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════
+       HERO
+  ═══════════════════════════ -->
+  <section id="hero" class="hero" aria-label="Hero section">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag" data-animate="fade-up">
+        <span class="tag-dot"></span>
+        <span>Available for opportunities</span>
+      </div>
+
+      <p class="hero-greeting" data-animate="fade-up" data-delay="100">Hello, I'm</p>
+
+      <h1 class="hero-name" data-animate="fade-up" data-delay="200">
+        <span class="name-line">Tsholofelo</span>
+        <span class="name-line accent">Puseletso Tseko</span>
+      </h1>
+
+      <div class="hero-role" data-animate="fade-up" data-delay="350">
+        <span class="role-prefix">// </span>
+        <span id="role-text" class="role-typed"></span>
+        <span class="type-cursor">|</span>
+      </div>
+
+      <p class="hero-bio" data-animate="fade-up" data-delay="450">
+        Final-year <strong>Belgium Campus iTversity</strong> student specialising in Infrastructure &amp; Security.
+        Aspiring Cybersecurity Analyst and founder of a registered web development company.
+      </p>
+
+      <div class="hero-actions" data-animate="fade-up" data-delay="550">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+
+      <div class="hero-stats" data-animate="fade-up" data-delay="650">
+        <div class="stat">
+          <span class="stat-num" data-count="2">0</span>
+          <span class="stat-label">Client Projects</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="3">0</span>
+          <span class="stat-label">Years Studying</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="1">0</span>
+          <span class="stat-label">Registered Company</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="terminal-window">
+        <div class="terminal-bar">
+          <span class="t-btn t-close"></span>
+          <span class="t-btn t-min"></span>
+          <span class="t-btn t-max"></span>
+          <span class="t-title">tseko@sec-analyst ~</span>
+        </div>
+        <div class="terminal-body" id="terminal-body"></div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       ABOUT
+  ═══════════════════════════ -->
+  <section id="about" class="section about" aria-label="About me">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">// 01</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text" data-animate="fade-up" data-delay="100">
+          <p>
+            I am a <strong>final-year student</strong> at Belgium Campus iTversity, pursuing a diploma in
+            <strong>Infrastructure and Security</strong>. My academic foundation covers network architecture,
+            operating systems, ethical hacking principles, and software development.
+          </p>
+          <p>
+            Alongside my studies, I run a <strong>registered web development company</strong> where I design
+            and deliver full-stack websites for clients, taking projects from initial brief through to a
+            live, production-ready product.
+          </p>
+          <p>
+            My goal is to build a career as a <strong>Cybersecurity Analyst</strong>, applying both my
+            technical security knowledge and development background to protect organisations from
+            evolving digital threats.
+          </p>
+
+          <div class="about-badges">
+            <span class="badge">Belgium Campus iTversity</span>
+            <span class="badge">Infrastructure &amp; Security</span>
+            <span class="badge">Registered Company</span>
+            <span class="badge">South Africa</span>
+          </div>
+        </div>
+
+        <div class="about-card-stack" data-animate="fade-up" data-delay="250">
+          <div class="info-card">
+            <div class="info-card-line" aria-hidden="true"></div>
+            <div>
+              <h4>Goal</h4>
+              <p>Cybersecurity Analyst specialising in threat detection and incident response</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-line" aria-hidden="true"></div>
+            <div>
+              <h4>Education</h4>
+              <p>Diploma in Information Technology &mdash; Infrastructure &amp; Security (Final Year)</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-line" aria-hidden="true"></div>
+            <div>
+              <h4>Company</h4>
+              <p>Founder of a registered web development agency delivering client websites</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-line" aria-hidden="true"></div>
+            <div>
+              <h4>Currently Open To</h4>
+              <p>Internships, graduate roles, and freelance cybersecurity or web development work</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       SKILLS
+  ═══════════════════════════ -->
+  <section id="skills" class="section skills" aria-label="Skills">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">// 02</span>
+        <h2 class="section-title">Skills &amp; Arsenal</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-category" data-animate="fade-up" data-delay="100">
+          <div class="skill-cat-header">
+            <h3>Cybersecurity</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="pill">Network Security</span>
+            <span class="pill">Penetration Testing</span>
+            <span class="pill">SIEM / Log Analysis</span>
+            <span class="pill">Vulnerability Assessment</span>
+            <span class="pill">Ethical Hacking</span>
+            <span class="pill">Incident Response</span>
+            <span class="pill">Firewall Configuration</span>
+            <span class="pill">Wireshark</span>
+          </div>
+        </div>
+
+        <div class="skill-category" data-animate="fade-up" data-delay="200">
+          <div class="skill-cat-header">
+            <h3>Web Development</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="pill">HTML / CSS</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">React</span>
+            <span class="pill">Node.js</span>
+            <span class="pill">PHP</span>
+            <span class="pill">MySQL</span>
+            <span class="pill">REST APIs</span>
+            <span class="pill">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="skill-category" data-animate="fade-up" data-delay="300">
+          <div class="skill-cat-header">
+            <h3>Infrastructure</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="pill">Linux Administration</span>
+            <span class="pill">Windows Server</span>
+            <span class="pill">Active Directory</span>
+            <span class="pill">TCP/IP Networking</span>
+            <span class="pill">VPN &amp; VLANs</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Cloud Fundamentals</span>
+            <span class="pill">Bash Scripting</span>
+          </div>
+        </div>
+
+        <div class="skill-category" data-animate="fade-up" data-delay="400">
+          <div class="skill-cat-header">
+            <h3>Tools &amp; Platforms</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="pill">Kali Linux</span>
+            <span class="pill">Nmap</span>
+            <span class="pill">Metasploit</span>
+            <span class="pill">Burp Suite</span>
+            <span class="pill">Git / GitHub</span>
+            <span class="pill">VS Code</span>
+            <span class="pill">Figma</span>
+            <span class="pill">Cisco Packet Tracer</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       PROJECTS
+  ═══════════════════════════ -->
+  <section id="projects" class="section projects" aria-label="Projects">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">// 03</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">Client work delivered through my registered web development company</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card featured" data-animate="fade-up" data-delay="200">
+          <div class="project-card-inner">
+            <div class="project-mock">
+              <div class="mock-bar"><span></span><span></span><span></span></div>
+              <div class="mock-content">
+                <div class="mock-line w70"></div>
+                <div class="mock-line w50"></div>
+                <div class="mock-line w85"></div>
+                <div class="mock-code">
+                  <span class="mc-cyan">GET</span>
+                  <span class="mc-white">/index.html</span>
+                  <span class="mc-green">200 OK</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="ptag">Web Development</span>
+                <span class="ptag featured-tag">Company Website</span>
+              </div>
+              <h3>Corporate Company Website</h3>
+              <p>Professional multi-page website designed and developed for a business client. Features a custom layout, service pages, contact form with back-end handling, SEO fundamentals, and a content management system for the client to self-manage.</p>
+              <div class="project-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span>
+              </div>
+              <div class="project-links">
+                <a href="https://tpwebdeveloper.co.za" class="plink plink-primary">
+                  View Project
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="https://github.com/tsholotseko-dev" class="plink plink-ghost">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       EXPERIENCE
+  ═══════════════════════════ -->
+  <section id="experience" class="section experience" aria-label="Experience and education">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">// 04</span>
+        <h2 class="section-title">Experience &amp; Education</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item" data-animate="fade-up" data-delay="100">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date">2023 &mdash; Present</span>
+              <span class="timeline-type">Education</span>
+            </div>
+            <h3>Diploma in Information Technology</h3>
+            <h4>Belgium Campus iTversity &middot; Pretoria, South Africa</h4>
+            <p>
+              Specialising in <strong>Infrastructure and Security</strong>. Coursework covers network architecture,
+              ethical hacking, penetration testing, operating systems, database design, and software development.
+              Currently a final-year student on track for graduation.
+            </p>
+            <div class="timeline-tags">
+              <span>Network Security</span>
+              <span>Linux</span>
+              <span>Databases</span>
+              <span>Software Development</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-animate="fade-up" data-delay="200">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date">January 2026 &mdash; Present</span>
+              <span class="timeline-type">Entrepreneurship</span>
+            </div>
+            <h3>Founder &amp; Lead Developer</h3>
+            <h4>TP Web Developer (Pty) Ltd &middot; South Africa (Registered)</h4>
+            <p>
+              Founded and operate a registered web development company. Responsible for client acquisition,
+              project scoping, full-stack design and development, and delivery of production-ready websites.
+              Successfully managed client projects while studying full-time.
+            </p>
+            <div class="timeline-tags">
+              <span>Full-Stack Development</span>
+              <span>Client Management</span>
+              <span>Business Operations</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       CONTACT
+  ═══════════════════════════ -->
+  <section id="contact" class="section contact" aria-label="Contact">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-tag">// 05</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-sub">Open to internships, graduate roles, and freelance projects</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-info" data-animate="fade-up" data-delay="100">
+          <p class="contact-intro">
+            Whether you want to discuss a security opportunity, need a website built,
+            or simply want to connect &mdash; my inbox is open.
+          </p>
+
+          <div class="contact-links">
+            <a href="tsekotsholofelo@icloud.com" class="contact-link">
+              <span class="cl-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <span>tsekotsholofelo@icloud.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/tsholofelo-puseletso-tseko-7317043a9/" class="contact-link" target="_blank" rel="noopener">
+              <span class="cl-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </span>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/tsholotseko-dev" class="contact-link" target="_blank" rel="noopener">
+              <span class="cl-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </span>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" data-animate="fade-up" data-delay="200" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Your name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="What is this about?" required />
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <span class="submit-text">Send Message</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+          </button>
+          <div class="form-success" id="form-success" role="alert" aria-live="polite"></div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════
+       FOOTER
+  ═══════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <a href="#hero" class="nav-logo">
+            <span class="logo-bracket">[</span>
+            <span class="logo-text">TPT</span>
+            <span class="logo-bracket">]</span>
+            <span class="logo-cursor">_</span>
+          </a>
+          <p>Tsholofelo Puseletso Tseko<br />Cybersecurity Analyst Aspirant.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Tsholofelo Puseletso Tseko. All rights reserved.</span>
+        <span class="footer-code">// built with passion &amp; code</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
